@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/style.css">
+    <title>SpeechCalculator</title>
+</head>
+<body>
+    
+    <div class="title">
+        <!-- <h1 class="title__name-app">SpeechCalculator</h1>
+        <div class="title__des-app">
+            <h2 class="title__des-app__title">
+                Перад пачаткам працы прачытайце калі ласка інструкцыю:
+            </h2>
+            <ul class="title__des-app__inst">
+                <li>
+                    Как пачаць працу з галасавым наборам націсніце кнопку "Я вас слухаю".
+                    Скажыце матэматычны выраз напрыклад: 100 плюс/мінус/памножыць на/распрануць на пяць;
+                    вынік выразу будзе высвечаны на маніторы і пранесены ў слых.
+                </li>
+                <li>
+                    Калі вы націснеце на роўна тое прыкладанне пранесены вынік выразы па лічбе.
+                </li>
+            </ul>
+        </div> -->
+        <button class="title__speak title__speak-btn" onclick="speech ()">Я вас слухаю</button>
+        <button class="title__stop title__stop-btn" onclick="stop ()">Перастаю слухаць</button>
+    </div>
+
+    <div class="wrapper" id="speecher">
+        <div class="loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <form action="#">
+        <div class="calculator">
+            <div class="block-enter">
+                <input type="text" id="enter" value="">
+            </div>
+            <div class="block-body" id="blockBody">
+                <div class="block-body__number" id="blockNumber">
+                    <button class="btn" id="btn-9" data-number="9" data-name="9">9</button>
+                    <button class="btn" id="btn-8" data-number="8" data-name="8">8</button>
+                    <button class="btn" id="btn-7" data-number="7" data-name="7">7</button>
+                    <button class="btn" id="btn-6" data-number="6" data-name="6">6</button>
+                    <button class="btn" id="btn-5" data-number="5" data-name="5">5</button>
+                    <button class="btn" id="btn-4" data-number="4" data-name="4">4</button>
+                    <button class="btn" id="btn-3" data-number="3" data-name="3">3</button>
+                    <button class="btn" id="btn-2" data-number="2" data-name="2">2</button>
+                    <button class="btn" id="btn-1" data-number="1" data-name="1">1</button>
+                    <button class="btn" id="btn-0" data-number="0" data-name="0">0</button>
+                    <button class="btn" id="btn-00" data-number="00" data-name="00">00</button>
+                    <button class="btn" id="btn-dot" data-number="." data-name="9точка">.</button>
+                </div>
+            </div>
+            <div class="block-body__operation" id="blockOperation">
+                <button class="btn" id="division" data-operation="/" data-name="разделить">/</button>
+                <button class="btn" id="multiplication" data-operation="*" data-name="умножить">x</button>
+                <button class="btn" id="minus" data-operation="-" data-name="минус">-</button>
+                <button class="btn" id="plus" data-operation="+" data-name="плюс">+</button>
+                <button class="btn" id="equals" data-operation="=" data-name="равно">=</button>
+                <input  class="btn" id="reset" type="reset" name="Reset">
+            </div>
+        </div>
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
